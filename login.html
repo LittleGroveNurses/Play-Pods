@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Play Pods — Sign In</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  @font-face { font-family: 'Sofia Pro'; src: url('/Play-Pods/assets/fonts/Sofia_Pro_Regular_Az.otf') format('opentype'); font-weight: 400; font-style: normal; }
+  @font-face { font-family: 'Sofia Pro'; src: url('/Play-Pods/assets/fonts/Sofia_Pro_Light_Az.otf') format('opentype'); font-weight: 300; font-style: normal; }
+  @font-face { font-family: 'Sofia Pro'; src: url('/Play-Pods/assets/fonts/Sofia_Pro_Semi_Bold_Az.otf') format('opentype'); font-weight: 600; font-style: normal; }
+  @font-face { font-family: 'Sofia Pro'; src: url('/Play-Pods/assets/fonts/Sofia_Pro_Bold_Az.otf') format('opentype'); font-weight: 700; font-style: normal; }
+
+  :root {
+    --navy:  #26315e;
+    --teal:  #0e6057;
+    --green: #45ab75;
+    --mauve: #c473a7;
+  }
+
+  body {
+    font-family: 'Sofia Pro', system-ui, sans-serif;
+    background: #f0f2f7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+
+  /* Subtle background pattern */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 50% at 20% 20%, rgba(14,96,87,.08) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 40% at 80% 80%, rgba(196,115,167,.07) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 60% at 60% 10%, rgba(38,49,94,.06) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .card {
+    background: white;
+    border-radius: 20px;
+    padding: 48px 44px 44px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 20px 60px rgba(38,49,94,.12), 0 4px 16px rgba(38,49,94,.06);
+    position: relative;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 36px;
+  }
+  .brand__icon {
+    width: 44px; height: 44px;
+    background: var(--navy);
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.3rem;
+  }
+  .brand__name {
+    font-family: 'Sofia Pro', system-ui, sans-serif;
+    font-size: 1.25rem;
+    color: var(--navy);
+    line-height: 1.2;
+  }
+  .brand__org {
+    font-size: .72rem;
+    color: #9090a0;
+    font-weight: 300;
+    letter-spacing: .02em;
+  }
+
+  h1 {
+    font-family: 'Sofia Pro', system-ui, sans-serif;
+    font-size: 1.7rem;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+  .subtitle {
+    font-size: .88rem;
+    color: #9090a0;
+    font-weight: 300;
+    margin-bottom: 32px;
+    line-height: 1.5;
+  }
+
+  label {
+    display: block;
+    font-size: .78rem;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: #555565;
+    margin-bottom: 8px;
+  }
+
+  .input-wrap {
+    position: relative;
+    margin-bottom: 8px;
+  }
+  input[type="password"],
+  input[type="text"] {
+    width: 100%;
+    height: 48px;
+    padding: 0 48px 0 16px;
+    border: 1.5px solid #d4d4dc;
+    border-radius: 10px;
+    font-size: .95rem;
+    font-family: inherit;
+    color: #1e1e2e;
+    background: #f8f9fc;
+    transition: border-color .15s, box-shadow .15s;
+    outline: none;
+  }
+  input:focus {
+    border-color: var(--teal);
+    box-shadow: 0 0 0 3px rgba(14,96,87,.12);
+    background: white;
+  }
+  input.error {
+    border-color: #e05050;
+    box-shadow: 0 0 0 3px rgba(224,80,80,.10);
+  }
+
+  .toggle-btn {
+    position: absolute;
+    right: 14px; top: 50%;
+    transform: translateY(-50%);
+    background: none; border: none;
+    cursor: pointer; padding: 4px;
+    color: #9090a0; font-size: .9rem;
+    line-height: 1;
+  }
+  .toggle-btn:hover { color: var(--navy); }
+
+  .error-msg {
+    font-size: .82rem;
+    color: #e05050;
+    margin-bottom: 16px;
+    display: none;
+    align-items: center;
+    gap: 6px;
+    min-height: 20px;
+  }
+  .error-msg.visible { display: flex; }
+
+  .submit-btn {
+    width: 100%;
+    height: 50px;
+    background: var(--navy);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: .95rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background .15s, transform .1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 4px;
+  }
+  .submit-btn:hover { background: #1a2245; }
+  .submit-btn:active { transform: scale(.98); }
+  .submit-btn:disabled { opacity: .6; cursor: not-allowed; }
+
+  .footer-note {
+    text-align: center;
+    font-size: .78rem;
+    color: #c0c0cc;
+    margin-top: 24px;
+    line-height: 1.5;
+  }
+
+  /* Shake animation on wrong password */
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%       { transform: translateX(-8px); }
+    40%       { transform: translateX(8px); }
+    60%       { transform: translateX(-6px); }
+    80%       { transform: translateX(6px); }
+  }
+  .shake { animation: shake .4s ease; }
+
+  /* Success state */
+  .submit-btn.success { background: var(--teal); }
+</style>
+</head>
+<body>
+
+<div class="card" id="card">
+
+  <div class="brand">
+    <img src="/Play-Pods/assets/logo.png" alt="Little Grove" style="height:40px;width:auto">
+  </div>
+
+  <h1>Sign in</h1>
+  <p class="subtitle">Enter the program password to access the Play Pods clinical reference.</p>
+
+  <form id="login-form" novalidate>
+    <label for="password">Password</label>
+    <div class="input-wrap">
+      <input
+        type="password"
+        id="password"
+        autocomplete="current-password"
+        autocorrect="off"
+        autocapitalize="off"
+        spellcheck="false"
+        placeholder="Enter password"
+        autofocus
+      >
+      <button type="button" class="toggle-btn" id="toggle-vis" aria-label="Show password">👁</button>
+    </div>
+
+    <div class="error-msg" id="error-msg">
+      ✕ Incorrect password. Please try again.
+    </div>
+
+    <button type="submit" class="submit-btn" id="submit-btn">
+      Continue →
+    </button>
+  </form>
+
+</div>
+
+<p class="footer-note">
+  Little Grove staff only.<br>
+  Contact your supervisor if you need access.
+</p>
+
+<script>
+(function () {
+  // SHA-256 of "Rainbow17!" — same value as auth.js
+  var CORRECT_HASH = 'd5a3db0076fc1bfa4166042e71fcc4cbab345eecef262320db6861a1b388ad4a';
+  var SESSION_KEY  = 'pp_auth_v1';
+
+  var form     = document.getElementById('login-form');
+  var input    = document.getElementById('password');
+  var errorMsg = document.getElementById('error-msg');
+  var submitBtn = document.getElementById('submit-btn');
+  var toggleBtn = document.getElementById('toggle-vis');
+  var card     = document.getElementById('card');
+
+  // Toggle password visibility
+  toggleBtn.addEventListener('click', function () {
+    var show = input.type === 'password';
+    input.type = show ? 'text' : 'password';
+    toggleBtn.textContent = show ? '🙈' : '👁';
+  });
+
+  // Clear error on typing
+  input.addEventListener('input', function () {
+    input.classList.remove('error');
+    errorMsg.classList.remove('visible');
+  });
+
+  // Submit
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    var val = input.value;
+    if (!val) return;
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Checking…';
+
+    // Hash the entered password using SubtleCrypto
+    try {
+      var encoder = new TextEncoder();
+      var data = encoder.encode(val);
+      var hashBuffer = await crypto.subtle.digest('SHA-256', data);
+      var hashArray = Array.from(new Uint8Array(hashBuffer));
+      var hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+
+      if (hashHex === CORRECT_HASH) {
+        // Correct — store and redirect
+        sessionStorage.setItem(SESSION_KEY, CORRECT_HASH);
+        submitBtn.textContent = '✓ Unlocking…';
+        submitBtn.classList.add('success');
+
+        // Redirect to stored return URL or index
+        var returnUrl = sessionStorage.getItem('pp_return') || 'index.html';
+        sessionStorage.removeItem('pp_return');
+        // Small delay so the user sees the success state
+        setTimeout(function () {
+          window.location.replace(returnUrl);
+        }, 400);
+
+      } else {
+        // Wrong password
+        input.classList.add('error');
+        errorMsg.classList.add('visible');
+        card.classList.add('shake');
+        setTimeout(function () { card.classList.remove('shake'); }, 450);
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Continue →';
+        input.focus();
+        input.select();
+      }
+    } catch (err) {
+      // Fallback if SubtleCrypto unavailable (very old browsers)
+      errorMsg.textContent = '✕ Your browser may not support this feature. Try Chrome or Safari.';
+      errorMsg.classList.add('visible');
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Continue →';
+    }
+  });
+
+})();
+</script>
+</body>
+</html>
