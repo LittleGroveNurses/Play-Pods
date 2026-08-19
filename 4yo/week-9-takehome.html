@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Take Home — Week 9 — 4-Year-Olds — Play Pods</title>
+<script src="../assets/auth.js"></script>
+<link rel="stylesheet" href="../assets/styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
+<style>
+  .th-wrap{max-width:920px;margin:0 auto;padding:32px 24px 60px}
+
+  .th-header{background:var(--navy);border-radius:var(--radius-lg);padding:30px 32px;color:white;margin-bottom:14px}
+  .th-header__title{font-family:var(--font-display);font-size:1.7rem;font-weight:600;letter-spacing:-.01em}
+  .th-header__sub{font-size:.85rem;color:rgba(255,255,255,.65);margin-top:6px}
+
+  .th-fields{border:1.5px solid var(--grey-100);border-radius:var(--radius-lg);padding:16px 24px;margin-bottom:14px;display:flex;gap:32px;font-size:.85rem;color:var(--grey-600)}
+  .th-fields span{border-bottom:1.5px solid var(--grey-200);padding-bottom:3px;min-width:180px;display:inline-block}
+
+  .th-focus{border:1.5px solid var(--grey-100);border-radius:var(--radius-lg);padding:20px 24px;margin-bottom:14px}
+  .th-focus__title{font-weight:700;font-size:.95rem;color:var(--navy)}
+  .th-focus__sub{font-size:.78rem;color:var(--grey-400);margin-top:2px}
+  .th-checkrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+  .th-check{display:flex;align-items:center;gap:9px;padding:9px 16px 9px 12px;border-radius:99px;font-size:.85rem;font-weight:700;color:white}
+  .th-check__box{width:15px;height:15px;border:2px solid rgba(255,255,255,.9);border-radius:3px;flex-shrink:0;display:inline-block}
+  .th-check--motor{background:var(--teal)}
+  .th-check--comm{background:var(--navy)}
+  .th-check--cog{background:#1a5fa8}
+  .th-check--se{background:var(--mauve)}
+  .th-check--sh{background:var(--green)}
+
+  .th-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .th-card{border-radius:var(--radius-lg);padding:22px 24px;color:white}
+  .th-card__domain{font-weight:700;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;opacity:.75;margin-bottom:10px}
+  .th-card__title{font-family:var(--font-display);font-size:1.15rem;font-weight:600;margin-bottom:8px;line-height:1.3}
+  .th-card__body{font-size:.88rem;line-height:1.55;opacity:.92}
+  .th-card--motor{background:var(--teal)}
+  .th-card--comm{background:var(--navy)}
+  .th-card--cog{background:#1a5fa8}
+  .th-card--se{background:var(--mauve)}
+  .th-card--sh{background:var(--green)}
+  .th-card--book{background:#eab308;color:#3a2f0a}
+  .th-card--book .th-card__domain{opacity:.6}
+  .th-card--book .th-card__body{opacity:.85}
+
+  .th-footer{border-radius:var(--radius-lg);padding:14px 24px;margin-top:14px;background:var(--grey-50);font-size:.8rem;color:var(--grey-400);text-align:center}
+
+  @media print {
+    .th-header, .th-check, .th-card{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .th-card{break-inside:avoid}
+    .th-grid{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:700px){
+    .th-grid{grid-template-columns:1fr}
+    .th-fields{flex-direction:column;gap:8px}
+  }
+</style>
+</head>
+<body class="page-home">
+
+<nav class="topnav" role="navigation">
+  <a href="../index.html" class="topnav__logo-wrap">
+    <img src="../assets/logo.png" alt="Little Grove" class="topnav__logo-img">
+  </a>
+  <div class="topnav__divider"></div>
+  <div class="topnav__breadcrumb">
+    <a href="index.html">4-Year-Olds</a>
+    <span class="sep">›</span>
+    <a href="week-9.html">Week 9</a>
+    <span class="sep">›</span>
+    <span class="current">Take Home</span>
+  </div>
+  <div class="topnav__actions">
+    <button class="topnav__btn topnav__btn--ghost" id="print-btn" onclick="window.print()" title="Print this page">⎙ Print</button>
+    <a href="week-9.html" class="topnav__btn topnav__btn--ghost">Full Week Guide</a>
+  </div>
+</nav>
+
+<div class="page-wrap">
+<main id="main" class="th-wrap">
+
+  <div class="th-header">
+    <div class="th-header__title">Try This at Home — Week 9</div>
+    <div class="th-header__sub">Little Grove — Child, Adolescent &amp; Family Health · Play Pods, 4-Year-Olds</div>
+  </div>
+
+  <div class="th-fields">
+    <div>Child's name: <span>&nbsp;</span></div>
+    <div>Week of: <span>&nbsp;</span></div>
+  </div>
+
+  <div class="th-focus">
+    <div class="th-focus__title">This week, focus on:</div>
+    <div class="th-focus__sub">Facilitator: tick 1–2 areas for this family to prioritise at home this week.</div>
+    <div class="th-checkrow">
+      <label class="th-check th-check--motor"><span class="th-check__box"></span>Motor</label>
+      <label class="th-check th-check--comm"><span class="th-check__box"></span>Communication</label>
+      <label class="th-check th-check--cog"><span class="th-check__box"></span>Cognitive</label>
+      <label class="th-check th-check--se"><span class="th-check__box"></span>Social-Emotional</label>
+      <label class="th-check th-check--sh"><span class="th-check__box"></span>Self-Help</label>
+    </div>
+  </div>
+
+  <div class="th-grid">
+    <div class="th-card th-card--motor">
+      <div class="th-card__domain">Movement</div>
+      <div class="th-card__title">Refine the skip or gallop</div>
+      <div class="th-card__body">Try for five steps in a row without stopping — either counts as real progress.</div>
+    </div>
+    <div class="th-card th-card--comm">
+      <div class="th-card__domain">Language</div>
+      <div class="th-card__title">Talk about a wider range of feelings</div>
+      <div class="th-card__body">Frustrated, proud, disappointed, excited — not just happy, sad, angry.</div>
+    </div>
+    <div class="th-card th-card--cog">
+      <div class="th-card__domain">Thinking &amp; Play</div>
+      <div class="th-card__title">Set up a pretend scenario with roles</div>
+      <div class="th-card__body">A shop or a cafe with a customer and a shopkeeper — swap roles partway through.</div>
+    </div>
+    <div class="th-card th-card--se">
+      <div class="th-card__domain">Feelings &amp; Friends</div>
+      <div class="th-card__title">Pack a bag from a picture list</div>
+      <div class="th-card__body">Three or four items on a simple checklist, done independently.</div>
+    </div>
+    <div class="th-card th-card--sh">
+      <div class="th-card__domain">Independence</div>
+      <div class="th-card__title">Play with today/tomorrow/yesterday</div>
+      <div class="th-card__body">Anchor it to something real — "yesterday was Play Pods day."</div>
+    </div>
+    <div class="th-card th-card--book">
+      <div class="th-card__domain">This Week's Book</div>
+      <div class="th-card__title"><em>If You Give a Mouse a Cookie</em></div>
+      <div class="th-card__body">By Laura Numeroff. A cause-and-effect chain story that supports this week's time-concept language and multi-role pretend play.</div>
+    </div>
+  </div>
+
+  <div class="th-footer">
+    Little Grove — Play Pods. Questions about this week's session? Speak with your facilitator or contact the Little Grove team.
+  </div>
+
+</main>
+</div>
+
+<script src="../assets/nav.js"></script>
+</body>
+</html>
