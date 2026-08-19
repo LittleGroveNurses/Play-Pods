@@ -126,22 +126,30 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   padding: 0 14px;
   border-radius: var(--radius-sm);
   font-size: .8rem;
-  font-weight: 500;
+  font-weight: 600;
   transition: all .15s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  white-space: nowrap;
 }
 .topnav__btn--ghost {
-  color: rgba(255,255,255,.8);
-  border: 1px solid rgba(255,255,255,.2);
+  color: rgba(255,255,255,.92);
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.4);
 }
 .topnav__btn--ghost:hover {
-  background: rgba(255,255,255,.12);
+  background: rgba(255,255,255,.18);
+  border-color: rgba(255,255,255,.6);
   color: white;
 }
 .topnav__btn--solid {
   background: var(--teal);
   color: white;
+  border: 1px solid var(--teal);
 }
-.topnav__btn--solid:hover { background: var(--teal-mid); }
+.topnav__btn--solid:hover { background: var(--teal-mid); border-color: var(--teal-mid); }
 
 /* ── Page layout ─────────────────────────────────────────── */
 .page-wrap {
