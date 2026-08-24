@@ -6,6 +6,8 @@
 <title>Take Home — Week 6 — 2-Year-Olds — Play Pods</title>
 <script src="../assets/auth.js"></script>
 <link rel="stylesheet" href="../assets/styles.css">
+<script src="../assets/vendor/pdf-lib.min.js"></script>
+<script src="../assets/pdf-export.js"></script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
 <style>
   .th-wrap{max-width:920px;margin:0 auto;padding:32px 24px 60px}
@@ -72,6 +74,7 @@
   </div>
   <div class="topnav__actions">
     <button class="topnav__btn topnav__btn--ghost" id="print-btn" onclick="window.print()" title="Print this page">⎙ Print</button>
+    <button class="topnav__btn topnav__btn--solid" id="pdf-btn" title="Download a fillable PDF of this take-home sheet">⬇ Download PDF</button>
     <a href="week-6.html" class="topnav__btn topnav__btn--ghost">Full Week Guide</a>
   </div>
 </nav>
@@ -142,5 +145,39 @@
 </div>
 
 <script src="../assets/nav.js"></script>
+<script>
+window.TAKEHOME_DATA = {
+  "title": "Try This at Home — Week 6",
+  "subtitle": "Little Grove — Child, Adolescent & Family Health · Play Pods, 2-Year-Olds",
+  "footer": "Little Grove — Play Pods. Questions about this week's session? Speak with your facilitator or contact the Little Grove team.",
+  "cards": {
+    "motor": {
+      "title": "Walk the tape line heel-to-toe",
+      "body": "Arms out helps. Take turns. See how far you can go."
+    },
+    "comm": {
+      "title": "Point out plurals all day",
+      "body": "'Shoes! Two shoes. Cups! Three cups.' Just model it naturally."
+    },
+    "cog": {
+      "title": "Clap copy at the table",
+      "body": "You clap a pattern, they copy. Start with one clap. Take turns — let them lead."
+    },
+    "se": {
+      "title": "Notice and name a feeling",
+      "body": "When your child meets a new person this week, stay close, name the person, and let your child approach in their own time."
+    },
+    "sh": {
+      "title": "Child brushes first every night",
+      "body": "Even for 10 seconds. Same song every time. You finish after."
+    },
+    "book": {
+      "title": "One Fish Two Fish Red Fish Blue Fish",
+      "body": "By Dr Seuss. Natural plural forms throughout — matching the plurals theme. Pause at counting and plural moments and wait for your child to complete the pattern. The rhythm makes it easy for children to anticipate and fill in."
+    }
+  },
+  "filename": "play-pods-2yo-week-6-take-home.pdf"
+};
+</script>
 </body>
 </html>

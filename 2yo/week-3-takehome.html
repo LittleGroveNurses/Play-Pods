@@ -6,6 +6,8 @@
 <title>Take Home — Week 3 — 2-Year-Olds — Play Pods</title>
 <script src="../assets/auth.js"></script>
 <link rel="stylesheet" href="../assets/styles.css">
+<script src="../assets/vendor/pdf-lib.min.js"></script>
+<script src="../assets/pdf-export.js"></script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
 <style>
   .th-wrap{max-width:920px;margin:0 auto;padding:32px 24px 60px}
@@ -72,6 +74,7 @@
   </div>
   <div class="topnav__actions">
     <button class="topnav__btn topnav__btn--ghost" id="print-btn" onclick="window.print()" title="Print this page">⎙ Print</button>
+    <button class="topnav__btn topnav__btn--solid" id="pdf-btn" title="Download a fillable PDF of this take-home sheet">⬇ Download PDF</button>
     <a href="week-3.html" class="topnav__btn topnav__btn--ghost">Full Week Guide</a>
   </div>
 </nav>
@@ -142,5 +145,39 @@
 </div>
 
 <script src="../assets/nav.js"></script>
+<script>
+window.TAKEHOME_DATA = {
+  "title": "Try This at Home — Week 3",
+  "subtitle": "Little Grove — Child, Adolescent & Family Health · Play Pods, 2-Year-Olds",
+  "footer": "Little Grove — Play Pods. Questions about this week's session? Speak with your facilitator or contact the Little Grove team.",
+  "cards": {
+    "motor": {
+      "title": "Kick a ball together",
+      "body": "Try 'step next to it, then kick' — say it out loud. Celebrate every kick."
+    },
+    "comm": {
+      "title": "Ask one 'where' question before meals",
+      "body": "Wait 5 full seconds before giving a clue."
+    },
+    "cog": {
+      "title": "Build a ball ramp",
+      "body": "A folder propped against books. Which ball goes furthest? Let your child discover it."
+    },
+    "se": {
+      "title": "Notice and name a feeling",
+      "body": "During one meal or bath, follow your child's pointing. Whatever they point to, name it and add a detail. Let them lead what you talk about."
+    },
+    "sh": {
+      "title": "Handwashing before every meal",
+      "body": "Same song, same steps, every time."
+    },
+    "book": {
+      "title": "Where's Spot?",
+      "body": "By Eric Hill. Lift-the-flap 'where' questions on every page — the communication theme this week is answering simple questions. Let your child lift each flap and wait for their answer before you name what's there."
+    }
+  },
+  "filename": "play-pods-2yo-week-3-take-home.pdf"
+};
+</script>
 </body>
 </html>

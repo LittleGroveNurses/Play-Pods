@@ -6,6 +6,8 @@
 <title>Take Home — Week 5 — 2-Year-Olds — Play Pods</title>
 <script src="../assets/auth.js"></script>
 <link rel="stylesheet" href="../assets/styles.css">
+<script src="../assets/vendor/pdf-lib.min.js"></script>
+<script src="../assets/pdf-export.js"></script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
 <style>
   .th-wrap{max-width:920px;margin:0 auto;padding:32px 24px 60px}
@@ -72,6 +74,7 @@
   </div>
   <div class="topnav__actions">
     <button class="topnav__btn topnav__btn--ghost" id="print-btn" onclick="window.print()" title="Print this page">⎙ Print</button>
+    <button class="topnav__btn topnav__btn--solid" id="pdf-btn" title="Download a fillable PDF of this take-home sheet">⬇ Download PDF</button>
     <a href="week-5.html" class="topnav__btn topnav__btn--ghost">Full Week Guide</a>
   </div>
 </nav>
@@ -142,5 +145,39 @@
 </div>
 
 <script src="../assets/nav.js"></script>
+<script>
+window.TAKEHOME_DATA = {
+  "title": "Try This at Home — Week 5",
+  "subtitle": "Little Grove — Child, Adolescent & Family Health · Play Pods, 2-Year-Olds",
+  "footer": "Little Grove — Play Pods. Questions about this week's session? Speak with your facilitator or contact the Little Grove team.",
+  "cards": {
+    "motor": {
+      "title": "Freeze dance at home",
+      "body": "Any music works. Run and dance when it plays, freeze when it stops. The stopping is the skill."
+    },
+    "comm": {
+      "title": "'Head, Shoulders' in the bath",
+      "body": "Touch each part as you name it. Try going faster each time."
+    },
+    "cog": {
+      "title": "Sort laundry together",
+      "body": "Colours vs whites. Or fruit vs vegetables from shopping."
+    },
+    "se": {
+      "title": "Notice and name a feeling",
+      "body": "Arrange a playdate with one other child. Don't organise activities — just provide the same materials and watch."
+    },
+    "sh": {
+      "title": "Shoes and socks off before bath",
+      "body": "Every night this week."
+    },
+    "book": {
+      "title": "My Five Senses",
+      "body": "By Aliki. Body part and sensory vocabulary — directly matching the body-part labelling theme and connecting naturally to interoception. Pause at each sense and ask: \"Where in your body do you feel that?\""
+    }
+  },
+  "filename": "play-pods-2yo-week-5-take-home.pdf"
+};
+</script>
 </body>
 </html>

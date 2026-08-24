@@ -6,6 +6,8 @@
 <title>Take Home — Week 1 — 2-Year-Olds — Play Pods</title>
 <script src="../assets/auth.js"></script>
 <link rel="stylesheet" href="../assets/styles.css">
+<script src="../assets/vendor/pdf-lib.min.js"></script>
+<script src="../assets/pdf-export.js"></script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
 <style>
   .th-wrap{max-width:920px;margin:0 auto;padding:32px 24px 60px}
@@ -72,6 +74,7 @@
   </div>
   <div class="topnav__actions">
     <button class="topnav__btn topnav__btn--ghost" id="print-btn" onclick="window.print()" title="Print this page">⎙ Print</button>
+    <button class="topnav__btn topnav__btn--solid" id="pdf-btn" title="Download a fillable PDF of this take-home sheet">⬇ Download PDF</button>
     <a href="week-1.html" class="topnav__btn topnav__btn--ghost">Full Week Guide</a>
   </div>
 </nav>
@@ -142,5 +145,39 @@
 </div>
 
 <script src="../assets/nav.js"></script>
+<script>
+window.TAKEHOME_DATA = {
+  "title": "Try This at Home — Week 1",
+  "subtitle": "Little Grove — Child, Adolescent & Family Health · Play Pods, 2-Year-Olds",
+  "footer": "Little Grove — Play Pods. Questions about this week's session? Speak with your facilitator or contact the Little Grove team.",
+  "cards": {
+    "motor": {
+      "title": "Set up a simple obstacle course",
+      "body": "Climb over a cushion. Walk along a line of tape on the floor. Kick a ball into a basket. Let your child choose what to do first. Say out loud what they're doing — for example, \"you're climbing so high!\""
+    },
+    "comm": {
+      "title": "Repeat what they say, and add one word",
+      "body": "If your child says \"ball,\" you say \"big ball.\" At mealtimes, wait a few seconds before you pour their drink — give them a chance to ask first. If they can't say the word, that's okay too — pointing is a good try."
+    },
+    "cog": {
+      "title": "Let them struggle with a puzzle",
+      "body": "Put out a shape sorter and let your child try without jumping in. If stuck, try 'hmm, which one might fit?' and wait."
+    },
+    "se": {
+      "title": "Notice and name a feeling",
+      "body": "At bedtime, point to faces in picture books and name the emotion. You don't need a response. Over weeks, you'll notice your child starting to point and name too."
+    },
+    "sh": {
+      "title": "Pick one skill to practise the same way each day",
+      "body": "Choose one thing, like washing hands or pulling up pants. Use the same words and steps every time. Let your child do the very last step by themselves — for example, pulling their pants up that last little bit."
+    },
+    "book": {
+      "title": "Brown Bear, Brown Bear, What Do You See?",
+      "body": "By Bill Martin Jr & Eric Carle. Highly repetitive two-word pattern on every page — ideal for the expectant pause. Pause before 'Brown Bear' and wait for your child to fill it in. Any attempt — a point, a sound, a word — gets the same warm response."
+    }
+  },
+  "filename": "play-pods-2yo-week-1-take-home.pdf"
+};
+</script>
 </body>
 </html>

@@ -6,6 +6,8 @@
 <title>Take Home — Week 2 — 2-Year-Olds — Play Pods</title>
 <script src="../assets/auth.js"></script>
 <link rel="stylesheet" href="../assets/styles.css">
+<script src="../assets/vendor/pdf-lib.min.js"></script>
+<script src="../assets/pdf-export.js"></script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
 <style>
   .th-wrap{max-width:920px;margin:0 auto;padding:32px 24px 60px}
@@ -72,6 +74,7 @@
   </div>
   <div class="topnav__actions">
     <button class="topnav__btn topnav__btn--ghost" id="print-btn" onclick="window.print()" title="Print this page">⎙ Print</button>
+    <button class="topnav__btn topnav__btn--solid" id="pdf-btn" title="Download a fillable PDF of this take-home sheet">⬇ Download PDF</button>
     <a href="week-2.html" class="topnav__btn topnav__btn--ghost">Full Week Guide</a>
   </div>
 </nav>
@@ -142,5 +145,39 @@
 </div>
 
 <script src="../assets/nav.js"></script>
+<script>
+window.TAKEHOME_DATA = {
+  "title": "Try This at Home — Week 2",
+  "subtitle": "Little Grove — Child, Adolescent & Family Health · Play Pods, 2-Year-Olds",
+  "footer": "Little Grove — Play Pods. Questions about this week's session? Speak with your facilitator or contact the Little Grove team.",
+  "cards": {
+    "motor": {
+      "title": "Find three steps to practise",
+      "body": "Go up and down slowly. Say each step out loud — \"up, up, up.\" Hold her hand lightly so she can still feel the movement herself."
+    },
+    "comm": {
+      "title": "Try the mystery bag",
+      "body": "Put a familiar object in a pillowcase. 'What is it? Soft? Round?' Wait before you say the answer."
+    },
+    "cog": {
+      "title": "Nesting cups in the bath",
+      "body": "Fill, pour, stack. Let your child experiment. Add a funnel if you have one."
+    },
+    "se": {
+      "title": "Notice and name a feeling",
+      "body": "Practise a goodbye routine at home — same words, same hug, same wave. Consistency makes it easier each time."
+    },
+    "sh": {
+      "title": "Let them pour their own drink",
+      "body": "Small amount in a small pitcher. Put a towel down. Step back. The mess is the practice."
+    },
+    "book": {
+      "title": "From Head to Toe",
+      "body": "By Eric Carle. Every page features an animal performing an action — 'I can do it!' Pause after each animal and wait for your child to name the action or copy the movement. Action words are the communication theme this week."
+    }
+  },
+  "filename": "play-pods-2yo-week-2-take-home.pdf"
+};
+</script>
 </body>
 </html>

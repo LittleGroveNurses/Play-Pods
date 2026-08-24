@@ -6,6 +6,8 @@
 <title>Take Home — Week 7 — 2-Year-Olds — Play Pods</title>
 <script src="../assets/auth.js"></script>
 <link rel="stylesheet" href="../assets/styles.css">
+<script src="../assets/vendor/pdf-lib.min.js"></script>
+<script src="../assets/pdf-export.js"></script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
 <style>
   .th-wrap{max-width:920px;margin:0 auto;padding:32px 24px 60px}
@@ -72,6 +74,7 @@
   </div>
   <div class="topnav__actions">
     <button class="topnav__btn topnav__btn--ghost" id="print-btn" onclick="window.print()" title="Print this page">⎙ Print</button>
+    <button class="topnav__btn topnav__btn--solid" id="pdf-btn" title="Download a fillable PDF of this take-home sheet">⬇ Download PDF</button>
     <a href="week-7.html" class="topnav__btn topnav__btn--ghost">Full Week Guide</a>
   </div>
 </nav>
@@ -142,5 +145,39 @@
 </div>
 
 <script src="../assets/nav.js"></script>
+<script>
+window.TAKEHOME_DATA = {
+  "title": "Try This at Home — Week 7",
+  "subtitle": "Little Grove — Child, Adolescent & Family Health · Play Pods, 2-Year-Olds",
+  "footer": "Little Grove — Play Pods. Questions about this week's session? Speak with your facilitator or contact the Little Grove team.",
+  "cards": {
+    "motor": {
+      "title": "Leave paper and crayons on a low table",
+      "body": "Let your child scribble whenever they choose. Ask 'tell me about this' rather than 'what is it?'"
+    },
+    "comm": {
+      "title": "Narrate what you're doing all day",
+      "body": "'I'm cutting, stirring, pouring, driving.' Every verb is one they're absorbing."
+    },
+    "cog": {
+      "title": "Leave doll props accessible",
+      "body": "A spoon, a blanket, a cup. Don't direct — just watch."
+    },
+    "se": {
+      "title": "Notice and name a feeling",
+      "body": "Create a small calm corner at home — a cushion, soft toy, and one or two books in a quiet spot. Show your child where it is when they're calm."
+    },
+    "sh": {
+      "title": "One real job at dinner every night",
+      "body": "Same job every night so it becomes their role."
+    },
+    "book": {
+      "title": "We're Going on a Bear Hunt",
+      "body": "By Michael Rosen. Rich action verb vocabulary — swishy swashy, splash splosh — matching the naming actions theme. Children love joining in the repeated actions. Pause before the sound words and wait. Also strong for gross motor: act out each environment together."
+    }
+  },
+  "filename": "play-pods-2yo-week-7-take-home.pdf"
+};
+</script>
 </body>
 </html>

@@ -6,6 +6,8 @@
 <title>Take Home — Week 11 — 2-Year-Olds — Play Pods</title>
 <script src="../assets/auth.js"></script>
 <link rel="stylesheet" href="../assets/styles.css">
+<script src="../assets/vendor/pdf-lib.min.js"></script>
+<script src="../assets/pdf-export.js"></script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
 <style>
   .th-wrap{max-width:920px;margin:0 auto;padding:32px 24px 60px}
@@ -72,6 +74,7 @@
   </div>
   <div class="topnav__actions">
     <button class="topnav__btn topnav__btn--ghost" id="print-btn" onclick="window.print()" title="Print this page">⎙ Print</button>
+    <button class="topnav__btn topnav__btn--solid" id="pdf-btn" title="Download a fillable PDF of this take-home sheet">⬇ Download PDF</button>
     <a href="week-11.html" class="topnav__btn topnav__btn--ghost">Full Week Guide</a>
   </div>
 </nav>
@@ -142,5 +145,39 @@
 </div>
 
 <script src="../assets/nav.js"></script>
+<script>
+window.TAKEHOME_DATA = {
+  "title": "Try This at Home — Week 11",
+  "subtitle": "Little Grove — Child, Adolescent & Family Health · Play Pods, 2-Year-Olds",
+  "footer": "Little Grove — Play Pods. Questions about this week's session? Speak with your facilitator or contact the Little Grove team.",
+  "cards": {
+    "motor": {
+      "title": "Jump off the bottom step",
+      "body": "Both feet together. 'Bendy knees like a frog!' Count how many jumps."
+    },
+    "comm": {
+      "title": "Tell me what we did",
+      "body": "After any event: 'what did we do? tell me about it.' Accept any attempt and expand it."
+    },
+    "cog": {
+      "title": "Sort the toy box with a rule change",
+      "body": "First by type, then by colour. The rule change is the challenge."
+    },
+    "se": {
+      "title": "Notice and name a feeling",
+      "body": "Cooperative challenge at home — 'let's move all the cushions from the lounge to the bedroom together.' Celebrate the completion."
+    },
+    "sh": {
+      "title": "Hats off inside, hats on outside",
+      "body": "Wait for them to do it every time. Same words every time."
+    },
+    "book": {
+      "title": "Dinosaur Roar!",
+      "body": "By Paul & Henrietta Stickland. Four-to-five word descriptive phrases throughout — matching the sentence expansion theme. Opposites (big/small, fast/slow) build sentence length naturally. Pause at opposites and wait for your child to supply the pair."
+    }
+  },
+  "filename": "play-pods-2yo-week-11-take-home.pdf"
+};
+</script>
 </body>
 </html>
