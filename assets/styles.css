@@ -475,32 +475,34 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .summary-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: .83rem;
+  font-size: 1rem;
   min-width: 560px;
 }
 .summary-table thead tr {
   background: var(--navy);
 }
 .summary-table thead th {
-  padding: 10px 14px;
+  padding: 13px 16px;
   text-align: left;
-  font-weight: 600;
+  font-weight: 700;
   color: white;
-  font-size: .75rem;
-  letter-spacing: .04em;
+  font-size: .9rem;
+  letter-spacing: .03em;
   white-space: nowrap;
 }
 .summary-table tbody tr:nth-child(even) { background: var(--grey-50); }
 .summary-table tbody tr:hover { background: var(--teal-light); }
 .summary-table tbody td {
-  padding: 10px 14px;
+  padding: 13px 16px;
   vertical-align: top;
   border-top: 1px solid var(--grey-100);
-  line-height: 1.45;
+  line-height: 1.55;
+  font-size: 1rem;
 }
 .summary-table .domain-label {
-  font-weight: 600;
+  font-weight: 700;
   white-space: nowrap;
+  font-size: 1rem;
 }
 .summary-table .domain-label--motor { color: var(--teal); }
 .summary-table .domain-label--comm  { color: var(--navy); }
@@ -509,17 +511,40 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .summary-table .domain-label--sh    { color: var(--green); }
 .summary-table .ef-badge {
   display: inline-block;
-  font-size: .7rem;
+  font-size: .85rem;
   font-weight: 600;
-  padding: 1px 7px;
+  padding: 2px 9px;
   border-radius: 99px;
   background: #e8f0fb;
   color: #1a5fa8;
 }
 .summary-table .parent-focus {
-  font-size: .78rem;
+  font-size: .95rem;
   font-style: italic;
   color: var(--grey-600);
+}
+
+/* ── Week-level equipment summary box ────────────────────── */
+.week-equipment {
+  margin-bottom: 24px;
+  padding: 16px 20px;
+  border-radius: var(--radius);
+  border: 1px solid var(--grey-100);
+  background: var(--grey-50);
+  box-shadow: var(--shadow-sm);
+}
+.week-equipment__title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+.week-equipment .equipment-list { margin-top: 0; gap: 8px; }
+.week-equipment .equipment-tag {
+  font-size: .88rem;
+  padding: 5px 13px;
+  background: white;
+  border-color: var(--grey-200);
 }
 
 /* ── Pod accordion ───────────────────────────────────────── */
