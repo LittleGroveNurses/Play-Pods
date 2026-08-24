@@ -6,6 +6,8 @@
 <title>Take Home — Week 2 — 4-Year-Olds — Play Pods</title>
 <script src="../assets/auth.js"></script>
 <link rel="stylesheet" href="../assets/styles.css">
+<script src="../assets/vendor/pdf-lib.min.js"></script>
+<script src="../assets/pdf-export.js"></script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
 <style>
   .th-wrap{max-width:920px;margin:0 auto;padding:32px 24px 60px}
@@ -72,6 +74,7 @@
   </div>
   <div class="topnav__actions">
     <button class="topnav__btn topnav__btn--ghost" id="print-btn" onclick="window.print()" title="Print this page">⎙ Print</button>
+    <button class="topnav__btn topnav__btn--solid" id="pdf-btn" title="Download a fillable PDF of this take-home sheet">⬇ Download PDF</button>
     <a href="week-2.html" class="topnav__btn topnav__btn--ghost">Full Week Guide</a>
   </div>
 </nav>
@@ -142,5 +145,39 @@
 </div>
 
 <script src="../assets/nav.js"></script>
+<script>
+window.TAKEHOME_DATA = {
+  "title": "Try This at Home — Week 2",
+  "subtitle": "Little Grove — Child, Adolescent & Family Health · Play Pods, 4-Year-Olds",
+  "footer": "Little Grove — Play Pods. Questions about this week's session? Speak with your facilitator or contact the Little Grove team.",
+  "cards": {
+    "motor": {
+      "title": "Practise the step-and-throw",
+      "body": "Step forward with the opposite foot to your throwing arm before you let go. Aim at a basket or box."
+    },
+    "comm": {
+      "title": "Ask a why-question and wait",
+      "body": "\"Why do we wear a coat?\" Give five seconds before helping with the answer."
+    },
+    "cog": {
+      "title": "Talk about your plan out loud",
+      "body": "Before an activity, say what you'll do first and what comes next — model it if they're stuck."
+    },
+    "se": {
+      "title": "Build something together",
+      "body": "Pick one shared goal, like one big tower, rather than two separate ones."
+    },
+    "sh": {
+      "title": "Practise full handwashing",
+      "body": "Let them do every step themselves — tap, soap, rinse, dry — even if it's slow."
+    },
+    "book": {
+      "title": "The Rainbow Fish",
+      "body": "By Marcus Pfister. A fish learns that sharing brings more joy than hoarding — a natural pairing for this week's cooperative-play focus."
+    }
+  },
+  "filename": "play-pods-4yo-week-2-take-home.pdf"
+};
+</script>
 </body>
 </html>

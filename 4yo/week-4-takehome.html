@@ -6,6 +6,8 @@
 <title>Take Home — Week 4 — 4-Year-Olds — Play Pods</title>
 <script src="../assets/auth.js"></script>
 <link rel="stylesheet" href="../assets/styles.css">
+<script src="../assets/vendor/pdf-lib.min.js"></script>
+<script src="../assets/pdf-export.js"></script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
 <style>
   .th-wrap{max-width:920px;margin:0 auto;padding:32px 24px 60px}
@@ -72,6 +74,7 @@
   </div>
   <div class="topnav__actions">
     <button class="topnav__btn topnav__btn--ghost" id="print-btn" onclick="window.print()" title="Print this page">⎙ Print</button>
+    <button class="topnav__btn topnav__btn--solid" id="pdf-btn" title="Download a fillable PDF of this take-home sheet">⬇ Download PDF</button>
     <a href="week-4.html" class="topnav__btn topnav__btn--ghost">Full Week Guide</a>
   </div>
 </nav>
@@ -142,5 +145,39 @@
 </div>
 
 <script src="../assets/nav.js"></script>
+<script>
+window.TAKEHOME_DATA = {
+  "title": "Try This at Home — Week 4",
+  "subtitle": "Little Grove — Child, Adolescent & Family Health · Play Pods, 4-Year-Olds",
+  "footer": "Little Grove — Play Pods. Questions about this week's session? Speak with your facilitator or contact the Little Grove team.",
+  "cards": {
+    "motor": {
+      "title": "Practise stairs holding the rail only",
+      "body": "Stay close for safety, but let them manage without holding your hand."
+    },
+    "comm": {
+      "title": "Retell a story together",
+      "body": "\"What happened first? Then what? How did it end?\" Use those exact words as prompts."
+    },
+    "cog": {
+      "title": "Find their name written down",
+      "body": "Point out the first letter and see if they can spot it elsewhere, like on a cereal box."
+    },
+    "se": {
+      "title": "Practise waiting with a countable number",
+      "body": "\"Two more turns, then it's you\" works much better than \"soon.\""
+    },
+    "sh": {
+      "title": "Let them use real cutlery at dinner",
+      "body": "Resist stepping in at the first spill — it's part of learning."
+    },
+    "book": {
+      "title": "The Three Billy Goats Gruff",
+      "body": "By traditional, illus. various. A clean beginning-middle-end structure with repetition, ideal for practising story retell in order."
+    }
+  },
+  "filename": "play-pods-4yo-week-4-take-home.pdf"
+};
+</script>
 </body>
 </html>
