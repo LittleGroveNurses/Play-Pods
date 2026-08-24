@@ -6,6 +6,8 @@
 <title>Take Home — Week 3 — 3-Year-Olds — Play Pods</title>
 <script src="../assets/auth.js"></script>
 <link rel="stylesheet" href="../assets/styles.css">
+<script src="../assets/vendor/pdf-lib.min.js"></script>
+<script src="../assets/pdf-export.js"></script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
 <style>
   .th-wrap{max-width:920px;margin:0 auto;padding:32px 24px 60px}
@@ -72,6 +74,7 @@
   </div>
   <div class="topnav__actions">
     <button class="topnav__btn topnav__btn--ghost" id="print-btn" onclick="window.print()" title="Print this page">⎙ Print</button>
+    <button class="topnav__btn topnav__btn--solid" id="pdf-btn" title="Download a fillable PDF of this take-home sheet">⬇ Download PDF</button>
     <a href="week-3.html" class="topnav__btn topnav__btn--ghost">Full Week Guide</a>
   </div>
 </nav>
@@ -142,5 +145,39 @@
 </div>
 
 <script src="../assets/nav.js"></script>
+<script>
+window.TAKEHOME_DATA = {
+  "title": "Try This at Home — Week 3",
+  "subtitle": "Little Grove — Child, Adolescent & Family Health · Play Pods, 3-Year-Olds",
+  "footer": "Little Grove — Play Pods. Questions about this week's session? Speak with your facilitator or contact the Little Grove team.",
+  "cards": {
+    "motor": {
+      "title": "Kick a ball together",
+      "body": "'Step next to it, then kick!' Say it out loud every time as a prompt. Count how many kicks land on target."
+    },
+    "comm": {
+      "title": "Ask 'where' and 'what' before every snack",
+      "body": "Wait 5 full seconds before giving a clue. Notice if your child starts answering faster by the end of the week."
+    },
+    "cog": {
+      "title": "Ball ramp at home",
+      "body": "A folder against some books. 'What do you think will happen?' before each roll. Try different objects."
+    },
+    "se": {
+      "title": "Notice and name a feeling",
+      "body": "During one meal or bath this week, follow your child's pointing entirely. Whatever they point to, name it and add a detail. Let them lead what you talk about for 5 minutes."
+    },
+    "sh": {
+      "title": "Handwashing before every meal",
+      "body": "Same song, same steps. By the end of the week — do they go to the sink before you tell them?"
+    },
+    "book": {
+      "title": "Each Peach Pear Plum",
+      "body": "By Janet & Allan Ahlberg. Where questions on every page — matching the where/what/who questioning theme. 'I spy... can you find them?' Let your child lead the search. Accept pointing as a valid answer and add the word."
+    }
+  },
+  "filename": "play-pods-3yo-week-3-take-home.pdf"
+};
+</script>
 </body>
 </html>

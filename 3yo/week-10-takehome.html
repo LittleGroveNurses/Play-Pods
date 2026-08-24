@@ -6,6 +6,8 @@
 <title>Take Home — Week 10 — 3-Year-Olds — Play Pods</title>
 <script src="../assets/auth.js"></script>
 <link rel="stylesheet" href="../assets/styles.css">
+<script src="../assets/vendor/pdf-lib.min.js"></script>
+<script src="../assets/pdf-export.js"></script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
 <style>
   .th-wrap{max-width:920px;margin:0 auto;padding:32px 24px 60px}
@@ -72,6 +74,7 @@
   </div>
   <div class="topnav__actions">
     <button class="topnav__btn topnav__btn--ghost" id="print-btn" onclick="window.print()" title="Print this page">⎙ Print</button>
+    <button class="topnav__btn topnav__btn--solid" id="pdf-btn" title="Download a fillable PDF of this take-home sheet">⬇ Download PDF</button>
     <a href="week-10.html" class="topnav__btn topnav__btn--ghost">Full Week Guide</a>
   </div>
 </nav>
@@ -142,5 +145,39 @@
 </div>
 
 <script src="../assets/nav.js"></script>
+<script>
+window.TAKEHOME_DATA = {
+  "title": "Try This at Home — Week 10",
+  "subtitle": "Little Grove — Child, Adolescent & Family Health · Play Pods, 3-Year-Olds",
+  "footer": "Little Grove — Play Pods. Questions about this week's session? Speak with your facilitator or contact the Little Grove team.",
+  "cards": {
+    "motor": {
+      "title": "Balloon keep-up",
+      "body": "Keep the balloon off the floor as long as possible. Count how many hits before it lands. Even 3 in a row is impressive."
+    },
+    "comm": {
+      "title": "Category language at the supermarket",
+      "body": "'These are all vegetables,' 'these are all cereals.' Ask: 'what else is a vegetable?' Building for reading and maths."
+    },
+    "cog": {
+      "title": "Make a sensory bag",
+      "body": "Zip-lock with hair gel, sealed with tape. Name what you notice: 'squishy, cold, smooth.'"
+    },
+    "se": {
+      "title": "Notice and name a feeling",
+      "body": "When your child sees someone upset this week — a sibling, a friend, a character in a book — ask: 'how do you think they feel? What could we do?' Wait for any response. Celebrate it."
+    },
+    "sh": {
+      "title": "Potty in the bathroom",
+      "body": "Let your child explore it as an object. No pressure. Just positive familiarity."
+    },
+    "book": {
+      "title": "Animalia",
+      "body": "By Graeme Base. Rich category vocabulary across every page — matching the grouping and explaining theme. Australian author. Vocabulary depth appropriate for 3yo consolidation. Use it as a category hunt: \"Can you find all the animals that swim?\""
+    }
+  },
+  "filename": "play-pods-3yo-week-10-take-home.pdf"
+};
+</script>
 </body>
 </html>

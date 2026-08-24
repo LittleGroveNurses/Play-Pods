@@ -6,6 +6,8 @@
 <title>Take Home — Week 9 — 3-Year-Olds — Play Pods</title>
 <script src="../assets/auth.js"></script>
 <link rel="stylesheet" href="../assets/styles.css">
+<script src="../assets/vendor/pdf-lib.min.js"></script>
+<script src="../assets/pdf-export.js"></script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
 <style>
   .th-wrap{max-width:920px;margin:0 auto;padding:32px 24px 60px}
@@ -72,6 +74,7 @@
   </div>
   <div class="topnav__actions">
     <button class="topnav__btn topnav__btn--ghost" id="print-btn" onclick="window.print()" title="Print this page">⎙ Print</button>
+    <button class="topnav__btn topnav__btn--solid" id="pdf-btn" title="Download a fillable PDF of this take-home sheet">⬇ Download PDF</button>
     <a href="week-9.html" class="topnav__btn topnav__btn--ghost">Full Week Guide</a>
   </div>
 </nav>
@@ -142,5 +145,39 @@
 </div>
 
 <script src="../assets/nav.js"></script>
+<script>
+window.TAKEHOME_DATA = {
+  "title": "Try This at Home — Week 9",
+  "subtitle": "Little Grove — Child, Adolescent & Family Health · Play Pods, 3-Year-Olds",
+  "footer": "Little Grove — Play Pods. Questions about this week's session? Speak with your facilitator or contact the Little Grove team.",
+  "cards": {
+    "motor": {
+      "title": "Tong transfer station at home",
+      "body": "Two bowls, kitchen tongs, cotton balls or grapes. How many can you transfer? Count together. Then try the spoon — which is harder?"
+    },
+    "comm": {
+      "title": "Tell me what happened",
+      "body": "'What did we do first? What happened then? What happened at the end?' Accept any response and expand it."
+    },
+    "cog": {
+      "title": "Shape hunt at home",
+      "body": "Find 3 circles, 3 squares, 3 rectangles. Photograph them and make a shape book."
+    },
+    "se": {
+      "title": "Notice and name a feeling",
+      "body": "Use your child's name in songs at home: 'Old MacDonald had a farm — and [name] was there!' They love it. And ask about the other children by name: 'what was [child] doing today?'"
+    },
+    "sh": {
+      "title": "One real delivery job each day",
+      "body": "Named person, specific item, real outcome. Same job every day so it becomes their role."
+    },
+    "book": {
+      "title": "The Tiger Who Came to Tea",
+      "body": "By Judith Kerr. Clear three-part narrative structure — matching the beginning, middle, end storytelling theme. After reading, try retelling together: \"What happened first? Then what? How did it end?\""
+    }
+  },
+  "filename": "play-pods-3yo-week-9-take-home.pdf"
+};
+</script>
 </body>
 </html>

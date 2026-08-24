@@ -6,6 +6,8 @@
 <title>Take Home — Week 7 — 3-Year-Olds — Play Pods</title>
 <script src="../assets/auth.js"></script>
 <link rel="stylesheet" href="../assets/styles.css">
+<script src="../assets/vendor/pdf-lib.min.js"></script>
+<script src="../assets/pdf-export.js"></script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
 <style>
   .th-wrap{max-width:920px;margin:0 auto;padding:32px 24px 60px}
@@ -72,6 +74,7 @@
   </div>
   <div class="topnav__actions">
     <button class="topnav__btn topnav__btn--ghost" id="print-btn" onclick="window.print()" title="Print this page">⎙ Print</button>
+    <button class="topnav__btn topnav__btn--solid" id="pdf-btn" title="Download a fillable PDF of this take-home sheet">⬇ Download PDF</button>
     <a href="week-7.html" class="topnav__btn topnav__btn--ghost">Full Week Guide</a>
   </div>
 </nav>
@@ -142,5 +145,39 @@
 </div>
 
 <script src="../assets/nav.js"></script>
+<script>
+window.TAKEHOME_DATA = {
+  "title": "Try This at Home — Week 7",
+  "subtitle": "Little Grove — Child, Adolescent & Family Health · Play Pods, 3-Year-Olds",
+  "footer": "Little Grove — Play Pods. Questions about this week's session? Speak with your facilitator or contact the Little Grove team.",
+  "cards": {
+    "motor": {
+      "title": "Leave paper and crayons on a low table",
+      "body": "Let your child scribble whenever they choose. Ask 'can you draw me a line? Can you make it go around?' rather than 'what did you draw?'"
+    },
+    "comm": {
+      "title": "Narrate your own actions all day",
+      "body": "'I'm cutting, stirring, pouring, driving.' Every verb you say out loud is one they're filing away."
+    },
+    "cog": {
+      "title": "Try the Silence Game before bed",
+      "body": "Can we all be completely quiet for 30 seconds? Model it yourself — stay completely still. Children who laugh at first usually become quite invested within a few tries. It's also a lovely settling ritual."
+    },
+    "se": {
+      "title": "Notice and name a feeling",
+      "body": "Set up a small calm corner at home — a cushion, soft toy, and one or two books. Practise the 'smell the flowers, blow the candles' breathing together when you're both calm. Then it's there when needed."
+    },
+    "sh": {
+      "title": "Let them prepare their own snack",
+      "body": "Peel a banana, slice it, carry it to the table. Set aside the extra 5 minutes. The mess is manageable. What they're building is not."
+    },
+    "book": {
+      "title": "Mr Gumpy's Outing",
+      "body": "By John Burningham. Rich action vocabulary throughout — each animal 'doing something' — matching the verb vocabulary theme. Pause at each animal boarding the boat: \"What is the pig doing?\" Wait. Accept and expand."
+    }
+  },
+  "filename": "play-pods-3yo-week-7-take-home.pdf"
+};
+</script>
 </body>
 </html>

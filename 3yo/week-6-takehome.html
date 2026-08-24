@@ -6,6 +6,8 @@
 <title>Take Home — Week 6 — 3-Year-Olds — Play Pods</title>
 <script src="../assets/auth.js"></script>
 <link rel="stylesheet" href="../assets/styles.css">
+<script src="../assets/vendor/pdf-lib.min.js"></script>
+<script src="../assets/pdf-export.js"></script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
 <style>
   .th-wrap{max-width:920px;margin:0 auto;padding:32px 24px 60px}
@@ -72,6 +74,7 @@
   </div>
   <div class="topnav__actions">
     <button class="topnav__btn topnav__btn--ghost" id="print-btn" onclick="window.print()" title="Print this page">⎙ Print</button>
+    <button class="topnav__btn topnav__btn--solid" id="pdf-btn" title="Download a fillable PDF of this take-home sheet">⬇ Download PDF</button>
     <a href="week-6.html" class="topnav__btn topnav__btn--ghost">Full Week Guide</a>
   </div>
 </nav>
@@ -142,5 +145,39 @@
 </div>
 
 <script src="../assets/nav.js"></script>
+<script>
+window.TAKEHOME_DATA = {
+  "title": "Try This at Home — Week 6",
+  "subtitle": "Little Grove — Child, Adolescent & Family Health · Play Pods, 3-Year-Olds",
+  "footer": "Little Grove — Play Pods. Questions about this week's session? Speak with your facilitator or contact the Little Grove team.",
+  "cards": {
+    "motor": {
+      "title": "Walk the tape line heel-to-toe",
+      "body": "Arms out like wings. See how far without stepping off. Take turns — who can go furthest?"
+    },
+    "comm": {
+      "title": "Point out plurals all day",
+      "body": "'Shoes! Two shoes. Cups! Three cups.' Just model it naturally. No drilling needed."
+    },
+    "cog": {
+      "title": "Clap copy at dinner",
+      "body": "You clap a pattern, they copy. Start with 2 claps. Build up to 4. Take turns being the pattern-maker."
+    },
+    "se": {
+      "title": "Notice and name a feeling",
+      "body": "When your child meets a new person this week, stay close, name the person calmly, and let your child approach in their own time. Resist the urge to push. Narrate what you both observe."
+    },
+    "sh": {
+      "title": "Child brushes first every night",
+      "body": "Same song every time. You finish after. Watch for them picking up the toothbrush before you suggest it."
+    },
+    "book": {
+      "title": "Ten Little Fingers and Ten Little Toes",
+      "body": "By Mem Fox. Counting, plurals, and body vocabulary combined — matching the plurals theme. Mem Fox is Australian — a strong local connection for SA families. Pause before the repeated line and let children complete it."
+    }
+  },
+  "filename": "play-pods-3yo-week-6-take-home.pdf"
+};
+</script>
 </body>
 </html>

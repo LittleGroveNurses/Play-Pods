@@ -6,6 +6,8 @@
 <title>Take Home — Week 2 — 3-Year-Olds — Play Pods</title>
 <script src="../assets/auth.js"></script>
 <link rel="stylesheet" href="../assets/styles.css">
+<script src="../assets/vendor/pdf-lib.min.js"></script>
+<script src="../assets/pdf-export.js"></script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
 <style>
   .th-wrap{max-width:920px;margin:0 auto;padding:32px 24px 60px}
@@ -72,6 +74,7 @@
   </div>
   <div class="topnav__actions">
     <button class="topnav__btn topnav__btn--ghost" id="print-btn" onclick="window.print()" title="Print this page">⎙ Print</button>
+    <button class="topnav__btn topnav__btn--solid" id="pdf-btn" title="Download a fillable PDF of this take-home sheet">⬇ Download PDF</button>
     <a href="week-2.html" class="topnav__btn topnav__btn--ghost">Full Week Guide</a>
   </div>
 </nav>
@@ -142,5 +145,39 @@
 </div>
 
 <script src="../assets/nav.js"></script>
+<script>
+window.TAKEHOME_DATA = {
+  "title": "Try This at Home — Week 2",
+  "subtitle": "Little Grove — Child, Adolescent & Family Health · Play Pods, 3-Year-Olds",
+  "footer": "Little Grove — Play Pods. Questions about this week's session? Speak with your facilitator or contact the Little Grove team.",
+  "cards": {
+    "motor": {
+      "title": "Practice alternating steps",
+      "body": "Find three steps. Walk up and down slowly: left, right, left, right. Count out loud. Can they do it without holding on by the end of the week?"
+    },
+    "comm": {
+      "title": "Mystery bag at home",
+      "body": "Any object in a pillowcase. 'Is it soft? Round? Big?' Wait for any response before looking."
+    },
+    "cog": {
+      "title": "Nesting cups in the bath",
+      "body": "'Which cup is biggest? Which is smallest? Which goes inside which?' Fill, pour, stack."
+    },
+    "se": {
+      "title": "Notice and name a feeling",
+      "body": "Practise a goodbye routine at home before the next session — same words, same hug, same wave every time. By week 4 or 5, it usually becomes much smoother."
+    },
+    "sh": {
+      "title": "Self-pour at one meal",
+      "body": "Small amount in a small jug. Put a towel down. Let it spill — that's the practice."
+    },
+    "book": {
+      "title": "Elmer",
+      "body": "By David McKee. Rich descriptive vocabulary — colours, patterns, feelings — matching the naming with descriptors theme. Pause at each descriptive moment: \"How would you describe Elmer?\" Model adding a descriptor to whatever word your child offers."
+    }
+  },
+  "filename": "play-pods-3yo-week-2-take-home.pdf"
+};
+</script>
 </body>
 </html>

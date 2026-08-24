@@ -6,6 +6,8 @@
 <title>Take Home — Week 4 — 3-Year-Olds — Play Pods</title>
 <script src="../assets/auth.js"></script>
 <link rel="stylesheet" href="../assets/styles.css">
+<script src="../assets/vendor/pdf-lib.min.js"></script>
+<script src="../assets/pdf-export.js"></script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
 <style>
   .th-wrap{max-width:920px;margin:0 auto;padding:32px 24px 60px}
@@ -72,6 +74,7 @@
   </div>
   <div class="topnav__actions">
     <button class="topnav__btn topnav__btn--ghost" id="print-btn" onclick="window.print()" title="Print this page">⎙ Print</button>
+    <button class="topnav__btn topnav__btn--solid" id="pdf-btn" title="Download a fillable PDF of this take-home sheet">⬇ Download PDF</button>
     <a href="week-4.html" class="topnav__btn topnav__btn--ghost">Full Week Guide</a>
   </div>
 </nav>
@@ -142,5 +145,39 @@
 </div>
 
 <script src="../assets/nav.js"></script>
+<script>
+window.TAKEHOME_DATA = {
+  "title": "Try This at Home — Week 4",
+  "subtitle": "Little Grove — Child, Adolescent & Family Health · Play Pods, 3-Year-Olds",
+  "footer": "Little Grove — Play Pods. Questions about this week's session? Speak with your facilitator or contact the Little Grove team.",
+  "cards": {
+    "motor": {
+      "title": "Throw at a target on the wall",
+      "body": "'Point, step, throw!' Say it out loud every time. Try 'can you hit the red circle?' to add aim."
+    },
+    "comm": {
+      "title": "Three-step direction at cleanup",
+      "body": "'Pick up your shoes, put them by the door, then come to the table.' Wait for all three steps."
+    },
+    "cog": {
+      "title": "Sort and switch the rule",
+      "body": "First by colour, then switch to big/small. The rule switch is the challenge — can they do it?"
+    },
+    "se": {
+      "title": "Notice and name a feeling",
+      "body": "Use the emotion song at home this week — add your own verses. When your child is having a big feeling, try naming it out loud before you try to fix it. 'You feel really angry.'"
+    },
+    "sh": {
+      "title": "Arms through sleeves every morning",
+      "body": "Hold the opening — they do the pushing. And wait for them to manage their own hat at every transition."
+    },
+    "book": {
+      "title": "Rosie's Walk",
+      "body": "By Pat Hutchins. Spatial and sequential direction language throughout — over, under, around, through — matching the two- and three-step direction theme. Act it out together as you read. The fox never quite gets there — children love the anticipation."
+    }
+  },
+  "filename": "play-pods-3yo-week-4-take-home.pdf"
+};
+</script>
 </body>
 </html>

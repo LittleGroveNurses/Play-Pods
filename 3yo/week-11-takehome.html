@@ -6,6 +6,8 @@
 <title>Take Home — Week 11 — 3-Year-Olds — Play Pods</title>
 <script src="../assets/auth.js"></script>
 <link rel="stylesheet" href="../assets/styles.css">
+<script src="../assets/vendor/pdf-lib.min.js"></script>
+<script src="../assets/pdf-export.js"></script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
 <style>
   .th-wrap{max-width:920px;margin:0 auto;padding:32px 24px 60px}
@@ -72,6 +74,7 @@
   </div>
   <div class="topnav__actions">
     <button class="topnav__btn topnav__btn--ghost" id="print-btn" onclick="window.print()" title="Print this page">⎙ Print</button>
+    <button class="topnav__btn topnav__btn--solid" id="pdf-btn" title="Download a fillable PDF of this take-home sheet">⬇ Download PDF</button>
     <a href="week-11.html" class="topnav__btn topnav__btn--ghost">Full Week Guide</a>
   </div>
 </nav>
@@ -142,5 +145,39 @@
 </div>
 
 <script src="../assets/nav.js"></script>
+<script>
+window.TAKEHOME_DATA = {
+  "title": "Try This at Home — Week 11",
+  "subtitle": "Little Grove — Child, Adolescent & Family Health · Play Pods, 3-Year-Olds",
+  "footer": "Little Grove — Play Pods. Questions about this week's session? Speak with your facilitator or contact the Little Grove team.",
+  "cards": {
+    "motor": {
+      "title": "Hopscotch at home — hopping",
+      "body": "Chalk or tape squares. Hop from square to square on one foot. Count how many hops in a row without putting the other foot down."
+    },
+    "comm": {
+      "title": "Tell me what happened",
+      "body": "After any event: 'what happened at the beginning? What happened next? At the end?' Expand whatever they say."
+    },
+    "cog": {
+      "title": "Sort with a rule switch",
+      "body": "'First animals vs vehicles — now let's sort by colour.' Can they switch the rule? If not yet, just celebrate the first sort."
+    },
+    "se": {
+      "title": "Notice and name a feeling",
+      "body": "Cooperative challenge at home: 'let's move all the cushions to the bedroom together.' Count how many trips. Celebrate the completion: 'we did it — together!'"
+    },
+    "sh": {
+      "title": "Teach the jacket floor flip",
+      "body": "At a non-urgent time — not the morning rush. Once they have it, they have it forever."
+    },
+    "book": {
+      "title": "Possum Magic",
+      "body": "By Mem Fox. Four-to-five word sentences throughout — matching the sentence expansion theme. Australian content and setting. Model the sentence structure as you read; pause at descriptive moments and wait for your child to add a word."
+    }
+  },
+  "filename": "play-pods-3yo-week-11-take-home.pdf"
+};
+</script>
 </body>
 </html>

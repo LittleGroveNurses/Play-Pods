@@ -6,6 +6,8 @@
 <title>Take Home — Week 5 — 3-Year-Olds — Play Pods</title>
 <script src="../assets/auth.js"></script>
 <link rel="stylesheet" href="../assets/styles.css">
+<script src="../assets/vendor/pdf-lib.min.js"></script>
+<script src="../assets/pdf-export.js"></script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
 <style>
   .th-wrap{max-width:920px;margin:0 auto;padding:32px 24px 60px}
@@ -72,6 +74,7 @@
   </div>
   <div class="topnav__actions">
     <button class="topnav__btn topnav__btn--ghost" id="print-btn" onclick="window.print()" title="Print this page">⎙ Print</button>
+    <button class="topnav__btn topnav__btn--solid" id="pdf-btn" title="Download a fillable PDF of this take-home sheet">⬇ Download PDF</button>
     <a href="week-5.html" class="topnav__btn topnav__btn--ghost">Full Week Guide</a>
   </div>
 </nav>
@@ -142,5 +145,39 @@
 </div>
 
 <script src="../assets/nav.js"></script>
+<script>
+window.TAKEHOME_DATA = {
+  "title": "Try This at Home — Week 5",
+  "subtitle": "Little Grove — Child, Adolescent & Family Health · Play Pods, 3-Year-Olds",
+  "footer": "Little Grove — Play Pods. Questions about this week's session? Speak with your facilitator or contact the Little Grove team.",
+  "cards": {
+    "motor": {
+      "title": "Red Light, Green Light at home",
+      "body": "Green = run, yellow = walk, red = freeze. Add 'silly walk!' for fun. The stopping and direction changes are the skill."
+    },
+    "comm": {
+      "title": "'Head, Shoulders' with function",
+      "body": "After each part, add its job: 'nose — and our nose is for smelling!' Let your child fill in the function."
+    },
+    "cog": {
+      "title": "Sort the toy box into three groups",
+      "body": "Animals, vehicles, figures. 'Why do these go together?' Then try switching the rule."
+    },
+    "se": {
+      "title": "Notice and name a feeling",
+      "body": "Arrange a playdate with one other child. Don't organise activities — just provide the same materials and watch. Narrate what you see: 'you're both building!'"
+    },
+    "sh": {
+      "title": "Shoes and socks off before bath",
+      "body": "Every night. Independently. Celebrate every attempt."
+    },
+    "book": {
+      "title": "The Foot Book",
+      "body": "By Dr Seuss. Body parts and function vocabulary — matching the body part labelling with function theme. Pause at each body part: \"What does your foot do? What else?\" Pairs naturally with the interoception body-check language this week."
+    }
+  },
+  "filename": "play-pods-3yo-week-5-take-home.pdf"
+};
+</script>
 </body>
 </html>
