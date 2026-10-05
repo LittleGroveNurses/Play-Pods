@@ -6,7 +6,7 @@
    ═══════════════════════════════════════════════════════════ */
 (function () {
   var SESSION_KEY = 'pp_auth_v1';
-  // SHA-256("Rainbow17!") — update this if the password changes
+  // SHA-256 hash of the program password. Regenerate if the password changes.
   var CORRECT_HASH = 'bcb06846ff04f6c8413c4be2a4403125cc1be2cffb5be449522c094a68879f41';
 
   // If already authenticated, nothing to do
